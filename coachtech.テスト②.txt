@@ -1,0 +1,19 @@
+1,データベース作成
+CREATE DATABASE coachtest;
+USE coach test;
+
+2,テーブル作成
+CREATE TABLE products(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, name VARCHAR(20) NOT NULL, price INT NOT NULL, expiration_date DATE NOT NULL, number INT NOT NULL);
+
+3,データ挿入
+INSERT INTO products SET name='納豆', price=250, expiration_date='2021-04-17', number=3;
+INSERT INTO products SET name='豆腐', price=170, expiration_date='2021-04-23', number=2;
+INSERT INTO products SET name='玉ねぎ', price=120, expiration_date='2021-04-21', number=4;
+INSERT INTO products SET name='ニンニク', price=250, expiration_date='2021-04-09', number=5;
+INSERT INTO products SET name='キムチ', price=300, expiration_date='2021-04-22', number=2;
+
+4,商品名・賞味期限のカラム表示
+SELECT name, expiration_date FROM products;
+
+5,250円以上または個数3個以下の全てのカラム表示
+SELECT * FROM products WHERE price >= 250 OR number <= 3;
